@@ -21,7 +21,7 @@ const styles = {
   Papper: {
     margin: 7,
     padding: 10,
-    minHeight: 300,
+    minHeight: 350,
     height: "inherit",
     borderRadius: 15,
     background: "light-grey"
@@ -50,7 +50,10 @@ class CourseModule extends Component {
           <List>
             {topics.map(topic => (
               <ListItemText key={topic.id}>
-                <span>{topic.topic}</span>
+                <i class="material-icons" style={{ color: "blue" }}>
+                  subdirectory_arrow_right
+                </i>
+                {topic.topic}
               </ListItemText>
             ))}
           </List>

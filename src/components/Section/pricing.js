@@ -5,7 +5,8 @@ import {
   List,
   ListItemText,
   CardContent,
-  Typography
+  Typography,
+  Button
 } from "@material-ui/core";
 
 const styles = {
@@ -16,9 +17,11 @@ const styles = {
   },
   card: {
     margin: 7,
-    maxWidth: 300,
-    minHeight: 560,
-    height: "inherit"
+    maxWidth: 400,
+    minHeight: 580,
+    borderRadius: 15,
+    height: "inherit",
+    verflowX: "auto"
   }
 };
 export default class Pricing extends Component {
@@ -166,7 +169,13 @@ export default class Pricing extends Component {
         </Grid>
         <Grid sm={4}>
           <Card style={styles.card} align="center">
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h5"
+              color="primary"
+              style={{ fontWeight: "bold", paddingTop: 20 }}
+            >
               {this.state.introductoryCourse.name}
             </Typography>
             <CardContent>
@@ -180,7 +189,13 @@ export default class Pricing extends Component {
         </Grid>
         <Grid sm={4}>
           <Card style={styles.card} align="center">
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h5"
+              color="primary"
+              style={{ fontWeight: "bold", paddingTop: 20 }}
+            >
               {this.state.intermidiateCourse.name}
             </Typography>
             <CardContent>
@@ -190,11 +205,18 @@ export default class Pricing extends Component {
                 </List>
               ))}
             </CardContent>
+            <Button color="primary">Sing up for 14,999</Button>
           </Card>
         </Grid>
-        <Grid sm={4} style={styles.card} align="center">
-          <Card>
-            <Typography gutterBottom variant="h5" component="h2">
+        <Grid sm={4} align="center">
+          <Card style={styles.card}>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h5"
+              color="primary"
+              style={{ fontWeight: "bold", paddingTop: 20 }}
+            >
               {this.state.advancedCourse.name}
             </Typography>
             <CardContent>

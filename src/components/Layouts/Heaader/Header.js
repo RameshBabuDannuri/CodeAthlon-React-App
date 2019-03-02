@@ -45,7 +45,7 @@ const Header = props => {
   return (
     <div className={classes.root}>
       <AppBar position="static" title={logo} color="inherit">
-        <Toolbar>
+        <Toolbar styles={{ boxShadow: "none", backgroundColor: "red" }}>
           <Avatar className={classes.logoName}>Ca</Avatar>
           <Typography variant="h6" color="primary" className={classes.grow}>
             Codeathlon Learning Series-Distributed Systems

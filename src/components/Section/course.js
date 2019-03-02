@@ -99,10 +99,12 @@ export default class Course extends Component {
     return (
       <Grid container style={styles.Grid}>
         <Grid sm={12} spacing={24} align="center">
-          <Typography>
-            <h1>How it works</h1>
-            <h4>Learn Distributed Systems</h4>
-            <p>Hands-on case study based classroom learning series</p>
+          <Typography variant="h4">How it works</Typography>
+          <Typography variant="subheading">
+            Learn Distributed Systems{" "}
+          </Typography>
+          <Typography variant="h6">
+            Hands-on case study based classroom learning series
           </Typography>
         </Grid>
         {this.state.courses.map(course => (
@@ -126,7 +128,7 @@ export default class Course extends Component {
                 {course.highlights.map(height => (
                   <ListItem key={height.id}>
                     {" "}
-                    <Icon style={styles.icon} color="action">
+                    <Icon style={styles.icon} color="primary">
                       book
                     </Icon>
                     {height.desciption}

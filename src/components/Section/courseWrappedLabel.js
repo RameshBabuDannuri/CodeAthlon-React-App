@@ -10,9 +10,13 @@ import IntroductoryCourse from "./introductoryCourse";
 import AdvancedCourse from "./advancedCourse";
 import IntermidiateCourse from "./intermidiateCourse";
 
-const style = {
+const styles = {
   AppBar: {
-    marginTop: 20
+    margin: 30
+  },
+  LinkTab: {
+    color: "white",
+    fontSize: 15
   }
 };
 
@@ -33,14 +37,6 @@ function LinkTab(props) {
     <Tab component="a" onClick={event => event.preventDefault()} {...props} />
   );
 }
-
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper
-  }
-});
-
 class CourseWrappedLabel extends React.Component {
   state = {
     value: 0
@@ -57,7 +53,7 @@ class CourseWrappedLabel extends React.Component {
     return (
       <NoSsr>
         <div className={classes.root} container>
-          <AppBar position="static" color="default" style={style.AppBar}>
+          <AppBar position="static" color="primary" style={styles.AppBar}>
             <Tabs
               variant="fullWidth"
               value={value}
@@ -67,16 +63,19 @@ class CourseWrappedLabel extends React.Component {
                 label="Distributed Systems - Introductory Course"
                 href="page1"
                 id="basic"
+                style={styles.LinkTab}
               />
               <LinkTab
                 label="Distributed Systems - Intermediate Course"
                 href="page2"
                 id="intermediate"
+                style={styles.LinkTab}
               />
               <LinkTab
                 label="Distributed Systems - Advanced Course"
                 href="page3"
                 id="advanced"
+                style={styles.LinkTab}
               />
             </Tabs>
           </AppBar>
