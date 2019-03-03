@@ -8,12 +8,8 @@ import {
 } from "@material-ui/core";
 const styles = {
   root: {
-    overflowX: "auto",
-    margin: 50,
+    margin: 30,
     padding: 20
-  },
-  table: {
-    minWidth: 700
   },
   row: {
     fontWeight: "bold",

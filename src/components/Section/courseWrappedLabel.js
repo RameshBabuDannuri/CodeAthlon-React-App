@@ -12,7 +12,9 @@ import IntermidiateCourse from "./intermidiateCourse";
 
 const styles = {
   AppBar: {
-    margin: 30
+    marginTop: 30,
+    padding: 20,
+    marginRight: 30
   },
   LinkTab: {
     color: "white",
@@ -51,51 +53,45 @@ class CourseWrappedLabel extends React.Component {
     const { value } = this.state;
 
     return (
-      <NoSsr>
-        <div className={classes.root} container>
-          <AppBar position="static" color="primary" style={styles.AppBar}>
-            <Tabs
-              variant="fullWidth"
-              value={value}
-              onChange={this.handleChange}
-            >
-              <LinkTab
-                label="Distributed Systems - Introductory Course"
-                href="page1"
-                id="basic"
-                style={styles.LinkTab}
-              />
-              <LinkTab
-                label="Distributed Systems - Intermediate Course"
-                href="page2"
-                id="intermediate"
-                style={styles.LinkTab}
-              />
-              <LinkTab
-                label="Distributed Systems - Advanced Course"
-                href="page3"
-                id="advanced"
-                style={styles.LinkTab}
-              />
-            </Tabs>
-          </AppBar>
-          {value === 0 && (
-            <TabContainer>
-              <IntroductoryCourse />
-            </TabContainer>
-          )}
-          {value === 1 && (
-            <TabContainer>
-              <IntermidiateCourse />
-            </TabContainer>
-          )}
-          {value === 2 && (
-            <TabContainer>
-              <AdvancedCourse />
-            </TabContainer>
-          )}
-        </div>
-      </NoSsr>
+      <React.Fragment>
+        <AppBar position="static" color="primary" style={styles.AppBar}>
+          <Tabs variant="fullWidth" value={value} onChange={this.handleChange}>
+            <LinkTab
+              label="Distributed Systems - Introductory Course"
+              href="page1"
+              id="basic"
+              style={styles.LinkTab}
+            />
+            <LinkTab
+              label="Distributed Systems - Intermediate Course"
+              href="page2"
+              id="intermediate"
+              style={styles.LinkTab}
+            />
+            <LinkTab
+              label="Distributed Systems - Advanced Course"
+              href="page3"
+              id="advanced"
+              style={styles.LinkTab}
+            />
+          </Tabs>
+        </AppBar>
+        {value === 0 && (
+          <TabContainer>
+            <IntroductoryCourse />
+          </TabContainer>
+        )}
+        {value === 1 && (
+          <TabContainer>
+            <IntermidiateCourse />
+          </TabContainer>
+        )}
+        {value === 2 && (
+          <TabContainer>
+            <AdvancedCourse />
+          </TabContainer>
+        )}
+      </React.Fragment>
     );
   }
 }

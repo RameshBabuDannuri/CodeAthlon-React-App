@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Grid, Typography, Button } from "@material-ui/core";
 import banner from "./../Banner/banner.png";
-import Image from "material-ui-image";
 const styles = {
+  root: {
+    marginTop: 50
+  },
   Gird: {
     align: "center",
     banckgroundColor: "white",
@@ -25,9 +27,14 @@ class Banner extends Component {
   state = {};
   render() {
     return (
-      <Grid container>
-        <Grid item lg={6} sm={3} style={styles.Grid}>
-          <Typography variant="h4" component="h6" style={styles.Typography}>
+      <Grid container style={styles.root}>
+        <Grid item lg={6} sm style={styles.Grid}>
+          <Typography
+            variant="h4"
+            component="h6"
+            style={styles.Typography}
+            id="appbar"
+          >
             Distributed System Course
           </Typography>
           <Typography style={{ paddingLeft: 50 }}>

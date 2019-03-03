@@ -30,8 +30,7 @@ const styles = {
     marginTop: 20
   },
   Button: {
-    marginLeft: 50,
-    marginBottom: "inherit"
+    borderRadius: "15px"
   }
 };
 export default class Course extends Component {
@@ -101,8 +100,8 @@ export default class Course extends Component {
   };
   render() {
     return (
-      <Grid container style={styles.Grid}>
-        <Grid sm={12} spacing={24} align="center">
+      <Grid container style={styles.Grid} spacing={24}>
+        <Grid item sm={12} align="center">
           <Typography variant="h4">How it works</Typography>
           <Typography variant="subheading">
             Learn Distributed Systems{" "}
@@ -116,7 +115,7 @@ export default class Course extends Component {
             <Card style={styles.Paper}>
               <i
                 className={course.icon}
-                style={{ color: "blue", textAlign: "center" }}
+                style={{ textAlign: "center", color: "#3700B3" }}
               />
               <Typography
                 variant="title"
