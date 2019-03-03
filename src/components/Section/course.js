@@ -15,11 +15,12 @@ const styles = {
     backgroundColor: "#f5f5f5"
   },
   Paper: {
-    margin: 10,
+    margin: 20,
     minHeight: 400,
     height: "inherit",
     padding: 10,
-    borderRadius: 15
+    borderRadius: 15,
+    textAlign: "center"
   },
   Typography: {
     color: "#1e88e5",
@@ -39,6 +40,7 @@ export default class Course extends Component {
       {
         id: 1,
         name: "Distributed Systems - Introductory Course",
+        icon: "fas fa-chess-pawn fa-3x",
         price: "9,999",
         desciption:
           "Learn fundamentals of Distributed Processing, Distributed Data Storage, NoSQL Databases, Microservcies, API Design, and System Design",
@@ -58,6 +60,7 @@ export default class Course extends Component {
         id: 2,
         name: "Distributed Systems - Intermediate Course",
         price: "14,999",
+        icon: "fas fa-chess-knight fa-3x",
         desciption:
           "Learn fundamentals of Distributed Processing, Distributed Data Storage, NoSQL Databases, Microservcies, API Design, and System Design",
         // eslint-disable-next-line no-sparse-arrays
@@ -79,6 +82,7 @@ export default class Course extends Component {
         id: 3,
         name: "Distributed Systems - Advanced Course",
         price: "19,999",
+        icon: "fas fa-chess-queen fa-3x",
         desciption:
           "Learn fundamentals of Distributed Processing, Distributed Data Storage, NoSQL Databases, Microservcies, API Design, and System Design",
         // eslint-disable-next-line no-sparse-arrays
@@ -110,6 +114,10 @@ export default class Course extends Component {
         {this.state.courses.map(course => (
           <Grid item sm={4} key={course.id}>
             <Card style={styles.Paper}>
+              <i
+                className={course.icon}
+                style={{ color: "blue", textAlign: "center" }}
+              />
               <Typography
                 variant="title"
                 gutterBottom
@@ -125,13 +133,13 @@ export default class Course extends Component {
                 {course.desciption}
               </Typography>
               <List style={styles.List}>
-                {course.highlights.map(height => (
-                  <ListItem key={height.id}>
+                {course.highlights.map(hilight => (
+                  <ListItem key={hilight.id}>
                     {" "}
                     <Icon style={styles.icon} color="primary">
                       book
                     </Icon>
-                    {height.desciption}
+                    {hilight.desciption}
                   </ListItem>
                 ))}
               </List>
