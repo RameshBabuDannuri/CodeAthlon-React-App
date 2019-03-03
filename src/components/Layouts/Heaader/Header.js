@@ -51,7 +51,9 @@ const Header = props => {
             Codeathlon Learning Series-Distributed Systems
           </Typography>
           <Button color="primary">Home</Button>
-          <Button color="primary">Courses</Button>
+          <Button color="primary" href="#basic">
+            Courses
+          </Button>
         </Toolbar>
       </AppBar>
     </div>

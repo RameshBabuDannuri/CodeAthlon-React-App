@@ -18,10 +18,10 @@ const styles = {
   card: {
     margin: 7,
     maxWidth: 400,
-    minHeight: 580,
+    maxHeight: 300,
     borderRadius: 15,
     height: "inherit",
-    verflowX: "auto"
+    overflowY: "auto"
   }
 };
 export default class Pricing extends Component {
@@ -178,6 +178,7 @@ export default class Pricing extends Component {
             >
               {this.state.introductoryCourse.name}
             </Typography>
+
             <CardContent>
               {this.state.introductoryCourse.topics.map(topic => (
                 <List>
@@ -185,6 +186,14 @@ export default class Pricing extends Component {
                 </List>
               ))}
             </CardContent>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              style={{ margin: 20 }}
+            >
+              Sing up for just 9,999 /-
+            </Button>
           </Card>
         </Grid>
         <Grid sm={4}>
@@ -205,7 +214,14 @@ export default class Pricing extends Component {
                 </List>
               ))}
             </CardContent>
-            <Button color="primary">Sing up for 14,999</Button>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              style={{ margin: 20 }}
+            >
+              Sing up for just 14,999 /-
+            </Button>
           </Card>
         </Grid>
         <Grid sm={4} align="center">
@@ -226,6 +242,14 @@ export default class Pricing extends Component {
                 </List>
               ))}
             </CardContent>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              style={{ margin: 20 }}
+            >
+              Sing up for just 19,999 /-
+            </Button>
           </Card>
         </Grid>
       </Grid>
